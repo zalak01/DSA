@@ -1,0 +1,9 @@
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+        min_price = float('inf')
+        max_profit = 0
+
+        for price in prices:
+            min_price = min(min_price, price)              # Track the minimum so far
+            max_profit = max(max_profit, price - min_price)  # Max profit if selling today
+        return max_profit
