@@ -1,0 +1,9 @@
+https://leetcode.com/problems/maximum-subarray/
+
+        current_sum = max_sum = nums[0]  # handle negatives too
+
+        for num in nums[1:]:
+            current_sum = max(num, current_sum + num)  # start new or extend
+            max_sum = max(max_sum, current_sum)        # update best seen so far
+
+        return max_sum
